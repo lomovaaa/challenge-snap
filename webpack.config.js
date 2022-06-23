@@ -29,7 +29,7 @@ module.exports = {
     main: "./index.js",
   },
   output: {
-    filename: "[name].[contenthash].js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
@@ -38,7 +38,7 @@ module.exports = {
   optimization: optimization(),
   devServer: {
     port: 4200,
-    hot: isDev,
+    hot: !isDev,
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -49,24 +49,14 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: "[name].css",
     }),
   ],
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: isDev,
-              reloadAll: true,
-            },
-          },
-          "css-loader",
-          "sass-loader",
-        ],
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpg|svg|gif)$/,
