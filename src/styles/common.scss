@@ -1,0 +1,45 @@
+.container {
+    margin: 0 auto;
+    padding: 0 22px;
+    max-width: $desktop;
+}
+
+.button {
+    width: fit-content;
+    padding: 8px 10px;
+    color: var(--medium-gray);
+    &:hover {
+        color: var(--almost-black);
+        transition-duration: 300ms;
+    }
+
+
+    &--with-border {
+        padding: 12px 24px;
+        font-weight: 500;
+        font-size: 0.9em;
+        border-radius: 15px;
+        border: 1px solid var(--medium-gray);
+        &:hover {
+            border-color: var(--almost-black);
+            transition-property: border, color;
+            transition-duration: 300ms;
+        }
+    }
+
+    &--filled {
+        font-weight: 700;
+        padding: 20px 40px;
+        border-radius: 15px;
+        color: var(--almost-white);
+        background-color: var(--almost-black);
+        &:hover {
+            padding: 19px 39px;
+            color: var(--almost-black);
+            border: 1px solid var(--almost-black);
+            background-color: var(--almost-white);
+            transition-property: background, color;
+            transition-duration: 300ms;
+        }
+    }
+}

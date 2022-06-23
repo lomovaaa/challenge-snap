@@ -2,20 +2,13 @@
 @import './fonts.scss';
 @import './variables.scss';
 @import './global.scss';
-
-.button {
-    width: fit-content;
-    padding: 8px 10px;
-    color: var(--medium-gray);
-    border-radius: 10px;
-    border: 2px solid var(--medium-gray);
-}
+@import './common.scss';
 
 .header {
     display: flex;
     align-items: center;   
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 33px 0;
 }
 
 .menu {
@@ -26,11 +19,17 @@
     &-list {
         display: flex;
         align-items: center;
-        column-gap: 20px;
+        column-gap: 3rem;
     }
 
     &__link {
+        font-size: 1em;
         color: var(--medium-gray);
+        &:hover {
+            color: var(--almost-black);
+            transition-property: color;
+            transition-duration: 300ms;
+        }
     }
 }
 
@@ -42,25 +41,35 @@
 
 .main {
     width: 100%;
-    max-width: 980px;
+}
+
+.content {
+    max-width: 80%;
     margin: 0 auto;
+    background-image: url('../assets/images/image-hero-desktop.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
 }
 
 .content-block {
     display: flex;
     flex-direction: column;
+    padding-top: 140px;
     padding-bottom: 80px;
 
     &__title {
-        margin-bottom: 60px;
-        font-size: 4em;
+        margin-bottom: 50px;
+        font-size: 5em;
         font-weight: 700;
         color: var(--almost-black);
     }
 
     &__description {
-        margin-bottom: 50px;
         max-width: 376px;
+        margin-bottom: 52px;
+        font-size: 1.2em;
+        line-height: 1.3em;
     }
 }
 
@@ -69,6 +78,8 @@
     align-items: center;
     column-gap: 40px;
 
-    &__link:hover svg {
+    &__link:hover svg path {
+        fill: var(--medium-gray);
+        transition-duration: 300ms;
     }
 }
