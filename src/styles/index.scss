@@ -1,8 +1,10 @@
 @import '~normalize.css';
+@import './fonts.scss';
 @import './variables.scss';
 @import './global.scss';
 
 .button {
+    width: fit-content;
     padding: 8px 10px;
     color: var(--medium-gray);
     border-radius: 10px;
@@ -19,6 +21,7 @@
 .menu {
     display: flex;
     align-items: center;
+    column-gap: 60px;
 
     &-list {
         display: flex;
@@ -35,6 +38,30 @@
     display: flex;
     align-items: center;
     column-gap: 20px;
+}
+
+.main {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+
+    &__title {
+        margin-bottom: 60px;
+        font-size: 4em;
+        font-weight: 700;
+        color: var(--almost-black);
+    }
+
+    &__description {
+        margin-bottom: 50px;
+        max-width: 376px;
+    }
 }
 
 .clients {
