@@ -1,0 +1,47 @@
+@import '~normalize.css';
+@import './variables.scss';
+@import './global.scss';
+
+.button {
+    padding: 8px 10px;
+    color: var(--medium-gray);
+    border-radius: 10px;
+    border: 2px solid var(--medium-gray);
+}
+
+.header {
+    display: flex;
+    align-items: center;   
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &-list {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__link {
+        color: var(--medium-gray);
+    }
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.clients {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+
+    &__link:hover svg {
+    }
+}

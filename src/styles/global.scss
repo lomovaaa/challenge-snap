@@ -1,0 +1,58 @@
+body {
+    margin: 0 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--medium-gray);
+    background-color: var(--almost-white);
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &:focus-visible {
+        outline-color: var(--almost-black);
+    }
+}
+
+button,
+input,
+textarea {
+    appearance: none;
+    font: inherit;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
