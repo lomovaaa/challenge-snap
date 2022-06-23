@@ -1,14 +1,29 @@
 @font-face {
     font-family: 'Epilogue';
-    src: url('../assets/fonts/Epilogue-Regular.ttf') format('truetype');
+    src: local('Epiloguet'), 
+        url('/assets/fonts/Epilogue-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+        url('/assets/fonts/Epilogue-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Epilogue';
-    src: url('../assets/fonts/Epilogue-Medium.ttf') format('truetype');
+    src: local('Epiloguet'), 
+        url('/assets/fonts/Epilogue-Medium.woff') format('woff'),
+        url('/assets/fonts/Epilogue-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Epilogue';
-    src: url('../assets/fonts/Epilogue-Bold.ttf') format('truetype');
+    src: local('Epiloguet'), 
+        url('/assets/fonts/Epilogue-Bold.woff') format('woff'),
+        url('/assets/fonts/Epilogue-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
