@@ -85,9 +85,10 @@
                 padding-bottom: 30px;
             }
 
-            &:hover {
+            &:hover, &:focus-within {
                 color: var(--almost-black);
                 & .dropdown {
+                    z-index: 1;
                     display: flex;
                 }
                 &::after {
@@ -160,7 +161,7 @@
     align-items: center;
     column-gap: 40px;
 
-    &__link:hover svg path {
+    &__link:hover svg path, &__link:focus svg path {
         fill: var(--medium-gray);
         transition-duration: 300ms;
     }
