@@ -15,7 +15,7 @@
 
 
     &--with-border {
-        padding: 12px 24px;
+        padding: 14px 20px 12px 21px;
         font-weight: 500;
         font-size: 0.9em;
         border-radius: 15px;
@@ -29,12 +29,13 @@
 
     &--filled {
         font-weight: 700;
-        padding: 20px 40px;
+        letter-spacing: 1px;
+        padding: 20px 27px 18px 32px;
         border-radius: 15px;
         color: var(--almost-white);
         background-color: var(--almost-black);
         &:hover {
-            padding: 19px 39px;
+            padding: 19px 26px 17px 31px;
             color: var(--almost-black);
             border: 1px solid var(--almost-black);
             background-color: var(--almost-white);
